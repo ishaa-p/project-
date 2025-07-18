@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="m-0 p-0 box-border max-[579px]:w-[579px]">
+  <!-- <div class="wrapper bg-neutral-300 w-screen h-screen flex items-center justify-center" >
+    <div class="card w-80 h-[27rem] p-2 bg-blue-100 rounded-xl space-y-3 overflow-hidden">
+        <img class="rounded-xl hover:scale-110 duration-500" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQbMffsV9fx0thtRlIR6kOsUffki3uzTs2EVcYRGcJlGr4p16nGqj0ucyCOEP6v16NLBj5xuq-KsBTGM8Ubf4aKwZ1Kr6IA0Ownl97uA14" alt="">
+        <p class="text-justify bg-[#26abd83d]">Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924.</p>
+        <button class="bg-purple-200 p-2 cursor-pointer rounded-xl">read more</button>
+    
+    </div>
+    </div> -->
+
+    <!-- nav -->
+    <nav class="w-full flex items-center justify-between bg-white p-4 shadow-md pl-9 pr-9 max-[400px]:gap-3  max-[400px]:min-w-full">
+            <div class="w-32 hidden max-[1200px]:block cursor-pointer">
+                <img src="layersassets2/asset 61.svg" alt="">
+            </div>
+            <div class="flex items-center gap-2 max-[400px]:pr-12 cursor-pointer">
+                <img class="w-16" src="layersassets2/asset 0.jpeg" alt="">
+            </div>
+            <div class="flex gap-8">
+                <div class="flex gap-10 max-[1200px]:hidden">
+                    <div class="cursor-pointer under_line"> <p> mobile skins      </p>   </div>
+                    <div class="cursor-pointer under_line"> <p> laptop skins      </p>   </div>
+                    <div class="cursor-pointer under_line"> <p> skin collections  </p>   </div>
+                    <div class="cursor-pointer under_line"> <p> device not found  </p>   </div>
+                    <div class="cursor-pointer under_line"> <p> how to apply      </p>   </div>
+                    <div class="cursor-pointer under_line"> <p> login             </p>   </div>
+                </div>
+                <div class="flex gap-6  max-[400px]:gap-2">
+                    <img src="layersassets2/asset 62.svg" alt="">
+                    <img class="w-6  max-[400px]:hidden" src="data:image/png;base64,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" alt="">
+                    <img class="w-6" src="data:image/jpeg;base64,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" alt="">
+                </div>
+            </div>
+    </nav>
+
+    <!--img bg 1  -->
+    <section class="w-full min-h-full">
+            <img class="w-full max-[400px]:hidden" src="layersassets2/asset 1.png" alt="">
+                <img src="layersassets2/asset 2.png" class="w-full block max-[400px]:block min-[401px]:hidden" alt="" >
+    </section>
+
+    <!-- icons -->
+    <section class="w-full">
+        <div class="flex flex-col items-center justify-center gap-8 p-6">
+            <p class="text-4xl text-center max-[400px]:text-2xl ">Select your brand</p>
+           
+            <div class="overflow-x-scroll w-full scrollbar-hide">
+                <div class="flex w-[1900px] gap-6 justify-around">
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 9.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 10.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 11.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 12.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 13.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 14.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 15.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 16.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 17.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 18.png" alt="">
+                    <p>Apple</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img class="w-32 rounded-full border border-gray-200" src="layersassets2/asset 19.jpeg" alt="">
+                    <p>Apple</p>
+                </div>
+                 </div>            
+            </div>
+        </div>
+    </section> 
+
+    <!-- phone cases -->
+    <section class="w-full flex justify-center">
+        <div class="w-[94%] m-2">
+            <p class="text-4xl text-center max-[400px]:text-2xl mb-4"> Layers Original Design  </p>
+        
+             <div class= "w-full grid grid-cols-4 gap-4 max-[750px]:grid-cols-2 mt-4 mb-4"> <!--"flex items-center justify-center "> -->
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+
+
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- img bg 2 -->
+    <section class="w-full min-h-full">
+            <img class="w-full max-[400px]:hidden" src="layersassets2/asset 29.jpeg" alt="">
+                <img src="layersassets2/asset 30.jpeg" class="w-full block max-[400px]:block min-[401px]:hidden" alt="" >
+    </section>
+
+    <!-- phone cases -->
+    <section class="w-full flex justify-center">
+        <div class="w-[94%] m-2">
+            <p class="text-4xl text-center max-[400px]:text-2xl mb-4"> Best Selling Mobile Skins  </p>
+        
+             <div class= "w-full grid grid-cols-4 gap-4 max-[750px]:grid-cols-2 mt-4 mb-4"> <!--"flex items-center justify-center "> -->
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 22.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+
+
+            
+            </div>
+        </div>
+    </section>
+
+     <!-- img bg 3 -->
+    <section class="w-full min-h-full">
+        <img class="w-full max-[400px]:hidden" src="layersassets2/asset 39.png" alt="">
+        <img src="layersassets2/asset 40.png" class="w-full block max-[400px]:block min-[401px]:hidden" alt="" >
+    </section>
+
+    <!-- laptop cases -->
+    <section class="w-full flex justify-center">
+        <div class="w-[94%] m-2">
+            <p class="text-4xl text-center max-[400px]:text-2xl mb-4"> Best Selling Mobile Skins  </p>
+        
+             <div class= "w-full grid grid-cols-4 gap-4 max-[750px]:grid-cols-2 mt-4 mb-4"> <!--"flex items-center justify-center "> -->
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="absolute z-10 bg-red-300 rounded-sm -top-1 -left-1 text-white p-0.5">new skin</div>
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+
+                <div class="w-fit h-fit relative group hover:cursor-pointer ">
+                    <div class="relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 41.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                            <p>Select your device</p>
+                        </div>
+                    </div>
+                   
+                    <div class="flex relative justify-between w-full">
+                        <div class="w-fit relative ">
+                            <p>Black Crack</p>
+                            <div class="after:content-[''] scale-x-0 group-hover:scale-x-[1] origin-left transition-all duration-500 absolute w-full h-[2px] bg-black"></div>
+                        </div>
+                        <p>₹ 599</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- follow us on instagram -->
+    <section>
+        <div>
+            <div class="text-4xl text-center max-[400px]:text-2xl mb-4">Follow us on Instagram</div>
+            <div class= "w-full grid grid-cols-4 gap-1 max-[750px]:grid-cols-2 mt-4"> <!--"flex items-center justify-center "> -->
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                  
+                <div class=" group relative w-fit h-fit ">
+                        <img class="w-fit relative" src="layersassets2/asset 55.jpeg" alt="">
+                        <div class="w-full h-full hidden top-0 text-center text-[#ffffff90] group-hover:flex items-center justify-center transition-all duration-[5s] absolute bg-[#00000050]">
+                        <img class="w-7 h-fit" src="layersassets2/asset 58.svg" alt="">                        
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- shipping -->
+    <section>
+        <div class="min-h-96 w-full flex justify-around items-center gap-2 pl-14 pr-14 max-[800px]:flex-col max-[800px]:p-10 ">
+            <div class="text-center flex flex-col items-center gap-2">
+                <img class="pb-6" src="layersassets2/asset 71.svg" alt="">
+                <p class="text-xl font-bold">Same Day Dispatch</p>
+                <p class="text-[#89807c] font-bold">All orders placed before 12pm <br> Monday to Friday are <br> dispatched same day </p>
+            </div>
+            <div class="text-center flex flex-col items-center gap-2">
+                <img class="pb-6" src="layersassets2/asset 72.svg" alt="">
+                <p class="text-xl font-bold">Smooth Delivery </p>
+                <p class="text-[#89807c] font-bold">Orders usually ship within 24 hours, but <br> during busy times, it might take up to <br> 2-3 business days.</p>
+            </div>
+            <div class="text-center flex flex-col items-center gap-2">
+                <img class="pb-6" src="layersassets2/asset 73.svg" alt="">
+                <p class="text-xl font-bold">Cancellation Policy</p>
+                <p class="text-[#89807c] font-bold">You can cancel your order from your <br> Layers account as long as it hasn’t been <br> packed for shipping.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class=" text-[13px] flex gap-16 justify-around pr-28 bg-[#e7e7e7] min-h-60 pt-8 max-[1000px]:pb-6">
+            <div class="w-full h-full flex justify-between pl-8 max-[1000px]:flex-col max-[1000px]:gap-7">
+                <div class="flex flex-col gap-2 ">
+                   <p>Vision</p>
+                   <p>Creativity, Explortaion and Expression</p>
+               </div>
+                <div class="flex flex-col gap-2 max-[1000px]:gap-0.5 ">
+                   <p>Pages</p>
+                   <p>About us</p>
+                   <p>Contact us</p>
+                   <p>Terms and condition</p>
+                   <p>Privacy policy</p>
+                   <p>Refunds/cancellation/shipping policy</p>
+                   <p>FAQs</p>
+               </div>
+            </div>
+
+            <div class=" w-full flex justify-between pl-28 max-[1000px]:flex-col">
+                <div class="flex flex-col gap-2 max-[1000px]:gap-0.5">
+                   <p>My accounts</p>
+                   <p>Login</p>
+                   <p>Register</p>
+                   <p>Track order</p>
+               </div>
+               <div class="flex flex-col gap-2 pr-28 ">
+                   <p>Follow us</p>
+                   <div class="flex flex-col gap-2 max-[1000px]:gap-0.5 ">
+                       <div class="flex gap-2 cursor-pointer under_line "><img class="w-4" src="layersassets2/asset 66.svg" alt=""> <p>Twitter</p> </div>
+                       <div class="flex gap-2 cursor-pointer under_line"><img class="w-4" src="layersassets2/asset 67.svg" alt=""> <p>Facebook</p> </div>
+                       <div class="flex gap-2 cursor-pointer under_line"><img class="w-4" src="layersassets2/asset 68.svg" alt=""> <p>Youtube</p> </div>
+                       <div class="flex gap-2 cursor-pointer under_line"><img class="w-4" src="layersassets2/asset 69.svg" alt=""> <p>Instagram</p> </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
